@@ -15,111 +15,117 @@
   </head>
   <body>
     <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <h1>San Francisco</h1>
-          <p>Sunday, 13:00</p>
-          <img
-            src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-            alt="Cloudy"
-          />
-          <p>Cloudy</p>
-        </div>
-        <div class="col-md-6">
-          <h2>6°</h2>
-          <p>C | F</p>
-        </div>
-      </div>
-      <nav class="navbar navbar-expand-sm navbar-light bg-light">
-        <div class="collapse navbar-collapse" id="navbarNav" role="tablist">
-          <div class="row">
-            <div class="col-md-6">
-              <ul class="nav nav-tabs" id="myTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                  <button
-                    class="nav-link active"
-                    id="details-tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#details-tab-pane"
-                    type="button"
-                    role="tab"
-                    aria-controls="details-tab-pane"
-                    aria-selected="true"
-                  >
-                    Details
-                  </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button
-                    class="nav-link"
-                    id="forecast-tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#forecast-tab-pane"
-                    type="button"
-                    role="tab"
-                    aria-controls="forecast-tab-pane"
-                    aria-selected="false"
-                  >
-                    Forecast
-                  </button>
-                </li>
-              </ul>
-              <div class="tab-content" id="myTabContent">
-                <div
-                  class="tab-pane fade show active"
-                  id="details-tab-pane"
-                  role="tabpanel"
-                  aria-labelledby="home-tab"
-                  tabindex="0"
-                >
-                  <ul class="list-group list-group-flush">
-                    <li
-                      class="list-group-item d-flex justify-content-between align-items-center"
-                    >
-                      Humidity:
-                      <span class="badge bg-dark rounded-pill">83%</span>
-                    </li>
-                    <li
-                      class="list-group-item d-flex justify-content-between align-items-center"
-                    >
-                      Wind:
-                      <span class="badge bg-dark rounded-pill">5 km/h</span>
-                    </li>
-                    <li
-                      class="list-group-item d-flex justify-content-between align-items-center"
-                    >
-                      Precipitation:
-                      <span class="badge bg-dark rounded-pill">70%</span>
-                    </li>
-                  </ul>
-                </div>
-                <div
-                  class="tab-pane fade"
-                  id="forecast-tab-pane"
-                  role="tabpanel"
-                  aria-labelledby="profile-tab"
-                  tabindex="0"
-                >
-                  ...
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <form class="d-flex" role="search">
-                <input
-                  class="form-control me-2"
-                  type="search"
-                  placeholder="Type a city..."
-                  aria-label="Search"
-                />
-                <button class="btn btn-outline-dark w-10" type="submit">
-                  Search
-                </button>
-              </form>
-            </div>
+      <div class="weather-app">
+        <div class="row">
+          <div class="col-md-6">
+            <h1 id="city">San Francisco</h1>
+            <p id="current-date">Sunday, 13:00</p>
+            <img
+              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+              alt="Cloudy"
+            />
+            <p id="description">Cloudy</p>
+          </div>
+          <div class="col-md-6">
+            <h2 id="temperature">18</h2>
+            <p id="temperature-unit">°C | °F</p>
           </div>
         </div>
-      </nav>
+        <nav
+          class="navbar navbar-expand-sm p-4"
+          style="background-color: rgba(0, 0, 0, 0.15)"
+          id="navigation-bar"
+        >
+          <div class="collapse navbar-collapse" id="navbarNav" role="tablist">
+            <div class="row">
+              <div class="col-6">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link active"
+                      id="details-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#details-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="details-tab-pane"
+                      aria-selected="true"
+                    >
+                      Details
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="forecast-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#forecast-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="forecast-tab-pane"
+                      aria-selected="false"
+                    >
+                      Forecast
+                    </button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="details-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="home-tab"
+                    tabindex="0"
+                  >
+                    <ul class="list-group list-group-flush">
+                      <li
+                        class="list-group-item d-flex justify-content-between align-items-center"
+                      >
+                        Humidity:
+                        <span class="badge bg-dark rounded-pill">83%</span>
+                      </li>
+                      <li
+                        class="list-group-item d-flex justify-content-between align-items-center"
+                      >
+                        Wind:
+                        <span class="badge bg-dark rounded-pill">5 km/h</span>
+                      </li>
+                      <li
+                        class="list-group-item d-flex justify-content-between align-items-center"
+                      >
+                        Precipitation:
+                        <span class="badge bg-dark rounded-pill">70%</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="forecast-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="profile-tab"
+                    tabindex="0"
+                  >
+                    ...
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <form class="d-flex" role="search">
+                  <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Type a city..."
+                    aria-label="Search"
+                  />
+                  <button class="btn btn-outline-dark w-10" type="submit">
+                    Search
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
       <small>
         Coded by
         <a href="https://github.com/moonbird-katharina" target="blank"
