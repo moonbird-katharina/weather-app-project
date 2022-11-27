@@ -5,9 +5,133 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
-    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <title>Weather</title>
   </head>
   <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1>San Francisco</h1>
+          <p>Sunday, 13:00</p>
+          <img
+            src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+            alt="Cloudy"
+          />
+          <p>Cloudy</p>
+        </div>
+        <div class="col-md-6">
+          <h2>6°</h2>
+          <p>C | F</p>
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarNav" role="tablist">
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="details-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#details-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="details-tab-pane"
+                    aria-selected="true"
+                  >
+                    Details
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="forecast-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#forecast-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="forecast-tab-pane"
+                    aria-selected="false"
+                  >
+                    Forecast
+                  </button>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="details-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="home-tab"
+                  tabindex="0"
+                >
+                  <ul class="list-group list-group-flush">
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center"
+                    >
+                      Humidity:
+                      <span class="badge bg-dark rounded-pill">83%</span>
+                    </li>
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center"
+                    >
+                      Wind:
+                      <span class="badge bg-dark rounded-pill">5 km/h</span>
+                    </li>
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center"
+                    >
+                      Precipitation:
+                      <span class="badge bg-dark rounded-pill">70%</span>
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="forecast-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="profile-tab"
+                  tabindex="0"
+                >
+                  ...
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Type a city..."
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-dark w-10" type="submit">
+                  Search
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <small>
+        Coded by
+        <a href="https://github.com/moonbird-katharina" target="blank"
+          >Katharina Schweizer</a
+        >
+      </small>
+    </div>
     <script src="src/app.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
