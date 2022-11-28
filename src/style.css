@@ -10,7 +10,7 @@ p {
 
 .weather-app {
   max-width: 600px;
-  margin: 100px auto;
+  margin: 100px auto 10px auto;
   padding: 30px;
   background-image: url("../Images/stars.jpg");
   background-size: 125%;
@@ -52,4 +52,10 @@ p {
 #details-tab,
 #forecast-tab {
   color: black;
+}
+
+#footer {
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
 }
