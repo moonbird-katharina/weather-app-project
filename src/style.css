@@ -23,6 +23,10 @@ p {
   font-weight: 200;
 }
 
+#date {
+  margin: 0;
+}
+
 #description {
   font-size: larger;
 }
