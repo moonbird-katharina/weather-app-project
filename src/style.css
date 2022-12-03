@@ -57,12 +57,32 @@ p {
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(5px);
 }
-#myTab {
-  backdrop-filter: blur(10px);
+
+#forecast-tab-pane {
+  background: #ffffff;
 }
+
 #details-tab,
 #forecast-tab {
   color: black;
+}
+
+.weather-forecast {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.forecast-date {
+  font-size: 16px;
+  color: #8a8a8a;
+}
+
+.forecast-temperatures {
+  font-size: 13px;
+}
+
+.forecast-temperature-min {
+  color: #8a8a8a;
 }
 
 #footer {
