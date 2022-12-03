@@ -29,6 +29,7 @@ p {
 
 #description {
   font-size: larger;
+  padding-left: 30px;
 }
 
 #temperature {
@@ -68,4 +69,8 @@ p {
   font-size: 12px;
   display: flex;
   justify-content: center;
+}
+
+#my-name {
+  color: black;
 }
