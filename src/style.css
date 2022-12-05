@@ -29,7 +29,7 @@ p {
 
 #description {
   font-size: larger;
-  padding-left: 30px;
+  text-align: start;
 }
 
 #temperature {
@@ -80,6 +80,7 @@ p {
 
 .forecast-temperatures {
   font-size: 13px;
+  text-align: center;
 }
 
 .forecast-temperature-min {
